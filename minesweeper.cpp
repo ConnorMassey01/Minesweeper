@@ -32,8 +32,8 @@ void createGameGrid(char grid[NUM_ROWS][NUM_COLS]){
     int rowPattern[8] = {0, 0, 1, -1, 1, -1, 1, -1};
     int colPattern[8] = {1, -1, 0, 0, 1, -1, -1, 1};
     while (addedMines < NUM_MINES){
-        row = rand() % 10;
-        col = rand() % 10;
+        row = rand() % NUM_ROWS;
+        col = rand() % NUM_COLS;
         if(grid[row][col] != 'M'){
             grid[row][col] = 'M';
             addedMines++;
